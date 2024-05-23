@@ -10,30 +10,28 @@ const Footer = () => {
         <Container>
             <div className="flex flex-col md:flex-row justify-between pt-16 pb-8">
                 <FooterList>
-                    <h3 className="text-base font-bold mb-2">Shop Categories</h3>
-                    <Link href="/">Phones</Link>
-                    <Link href="/">Laptops</Link>
-                    <Link href="/">Face Caps</Link>
-                    <Link href="/">Watches</Link>
-                    <Link href="/">Smart Watches</Link>
-                    <Link href="/">Tvs</Link>
-                    <Link href="/">Jewelries</Link>
+                    <h3 className="text-base font-bold mb-2">Membership Plans</h3>
+                    <Link href="/">Hourly</Link>
+                    <Link href="/">Daily</Link>
+                    <Link href="/">Weekly</Link>
+                    <Link href="/">Monthly</Link>
+                    <Link href="/">Corporate plans</Link>
+                    <Link href="/">Flex Plans</Link>
                 </FooterList>
 
                 <FooterList>
                     {/* Customer service */}
                     <h3 className="text-base font-bold mb-2">Customer Services</h3>
                     <Link href="/">Contact Us</Link>
-                    <Link href="/">Shipping Policy</Link>
-                    <Link href="/">Returns and Exchanges</Link>
+                    <Link href="/">Terms of Service</Link>
+                    <Link href="/">Privacy Policy</Link>
                     <Link href="/">FAQs</Link>
-                    <Link href="/">Smart Watches</Link>
-                    <Link href="/">Tvs</Link>
-                    <Link href="/">Jewelries</Link>
+                    <Link href="/">Support Center</Link>
+                    <Link href="/">Cancellation Policy</Link>
                 </FooterList>
                 <div className="w-full md:w-1/3 mb-6 md:mb-0">
                     <h3 className="text-base font-bold mb-2">About Us</h3>
-                    <p>Proving quality services and ensuring our customers get the best deals at the most perfect price. With a wide selection of phones, laptops, Tvs, Watches and many more</p>
+                    <p>We provide a flexible, comfortable, and productive workspace for freelancers, remote workers, and teams. Our plans cater to various needs, whether you are looking for a spot for a few hours or a dedicated desk for a month. Join us and enhance your work experience with our top-notch facilities and supportive community.</p>
                     <p>&copy; {new Date().getFullYear()} E-Shop. All rights reserved</p>
                 </div>
 

@@ -4,12 +4,14 @@ import { Poppins } from 'next/font/google'
 import Navbar from './components/nav/Navbar'
 import Footer from './components/footer/Footer'
 import { Toaster } from 'react-hot-toast'
+import { CartContextProvider } from '@/hooks/useCart'
+import CartProvider from '@/providers/CartProvider'
 
 const poppins = Poppins({ subsets: ['latin'],weight: ['400', '700'] })
 
 export const metadata: Metadata = {
-  title: 'E-shop',
-  description: 'Ecommerce App',
+  title: 'Workspace',
+  description: 'Elysimon Workspace',
 }
 
 export default function RootLayout({
@@ -26,6 +28,7 @@ export default function RootLayout({
             color: "#fff",
           }
         }}/>
+          <CartProvider>
           <div className='flex flex-col min-h-screen'>
             <Navbar/>
             <main className='flex-grow'>
@@ -33,6 +36,7 @@ export default function RootLayout({
             </main>
             <Footer/>
           </div>
+        </CartProvider>
       </body>
     </html>
   )
