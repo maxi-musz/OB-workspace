@@ -6,36 +6,37 @@ import { Redressed } from "next/font/google";
 const redressed = Redressed({subsets: ["latin"], weight: ["400"]})
 
 const Navbar = () => {
-    return ( 
-    <div className="
-    sticky
-    top-0
-    w-full
-    bg-slate-200
-    z-30
-    shadow
-
-    ">
-        <div className="py-4 border-b-[1px]">
-            <Container>
-                <div className="
-                flex
-                items-center
-                justify-between
-                gap-3
-                md:gap-0
-
-                ">
-                    <Link href="/" className={`${redressed.className} font-bold text-2xl`}>E-Shop</Link>
-                    {/* <div className="hidden md:block">Search</div> */}
-                    <div className="flex items-center gap-8 md:gap-12">
-                        <div>CartCount</div>
-                        <div>UserMenu</div>
-                    </div>
-                </div>
-            </Container>
-        </div>
-    </div> );
+    return (
+        <nav className="bg-white shadow-sm fixed top-0 left-0 right-0 z-10">
+          <div className="container mx-auto px-4 py-4 flex justify-between items-center ">
+            <Link href="/" legacyBehavior>
+              <a className="text-2xl font-bold text-gray-900">O~B Hub</a>
+            </Link>
+            <div className="hidden md:flex space-x-4">
+              <Link href="/products" legacyBehavior><a className="text-gray-700 hover:text-gray-900">Home</a></Link>
+              <Link href="/resources" legacyBehavior><a className="text-gray-700 hover:text-gray-900">Workspace Amenities</a></Link>
+              <Link href="/solutions" legacyBehavior><a className="text-gray-700 hover:text-gray-900">About Us</a></Link>
+              <Link href="/company" legacyBehavior><a className="text-gray-700 hover:text-gray-900">Pricing</a></Link>
+              <Link href="/pricing" legacyBehavior><a className="text-gray-700 hover:text-gray-900">Support</a></Link>
+              <Link href="/pricing" legacyBehavior><a className="text-gray-700 hover:text-gray-900">Blog/News</a></Link>
+              <Link href="/pricing" legacyBehavior><a className="text-gray-700 hover:text-gray-900">Policy</a></Link>
+            </div>
+            <div className="hidden md:flex items-center space-x-4">
+              <Link href="/support" legacyBehavior><a className="text-gray-700 hover:text-gray-900">FAQs</a></Link>
+              <Link href="/signin" legacyBehavior><a className="text-gray-700 hover:text-gray-900">Sign In</a></Link>
+              <Link href="/signup" legacyBehavior><a className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600">Try Free</a></Link>
+            </div>
+            <div className="md:hidden">
+              <button className="text-gray-700">
+                {/* Icon for mobile menu */}
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </nav>
+    );
 }
  
 export default Navbar;

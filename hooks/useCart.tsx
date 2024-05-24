@@ -9,6 +9,7 @@ type CartContextType = {
     removeFromCart: (product: CartProductType) => void
     handleCartQtyIncrease: (product: CartProductType) => void
     handleCartQtyDecrease: (product: CartProductType) => void
+    handleClearCart: () => void
 }
 
 export const CartContext = createContext<CartContextType | null> (null)
@@ -110,7 +111,13 @@ export const CartContextProvider = (props: Props) => {
             console.error("cartProducts is null or undefined");
         }
     }, [cartProducts, setCartProducts]);
-    
+
+    const handleClearCart = useCallback(() => {
+        console.log("clearing cart...")
+        setCartProducts(null)
+        setCartTotalQty(0)
+        localStorage.setItem("Elysimon-store", JSON.stringify(null))
+    }, [])
 
  const value = {
         cartTotalQty,
@@ -118,7 +125,8 @@ export const CartContextProvider = (props: Props) => {
         handleAddProductToCart,
         removeFromCart,
         handleCartQtyIncrease,
-        handleCartQtyDecrease
+        handleCartQtyDecrease,
+        handleClearCart
 
     }
     
