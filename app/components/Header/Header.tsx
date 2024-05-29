@@ -6,10 +6,10 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-white py-12">
+    <header className="bg-white py-12 ">
       <div className="container mx-auto flex flex-col lg:flex-row items-center">
         <div className="lg:w-1/2 mb-8 lg:mb-0">
-          <h1 className="text-4xl font-bold mb-4">Comfortable Workspace.<br />Suitable for <span className="text-green-500">Personal or Office works</span>.</h1>
+          <h1 className="text-4xl font-bold mb-4">Comfortable Workspace.<br />Suitable for <span className="text-green-500">Personal or Office works Dabex</span>.</h1>
           <p className="text-gray-700 mb-8">A most realxing, conducive and easiest way to work without any form of disturbances or interruptions</p>
           <div className="flex space-x-4">
             <Link href="/try-free" legacyBehavior>
@@ -20,16 +20,6 @@ const Header: React.FC = () => {
             </Link>
           </div>
 
-          
-        </div>
-        <div className="w-[32rem] relative aspect-video lg:ml-10">
-                    <Image
-                    src="/workspace-img1.jpg"
-                    alt="banner-image"
-                    fill
-                    className="object-contain"
-                    />
-          </div>
           <br />
           <br />
           <hr />
@@ -51,6 +41,17 @@ const Header: React.FC = () => {
               </div>
             </div>
           </div>
+          
+        </div>
+        <div className="w-[32rem] relative aspect-video lg:ml-10">
+                    <Image
+                    src="/workspace-img1.jpg"
+                    alt="banner-image"
+                    fill
+                    className="object-contain"
+                    />
+          </div>
+          
       </div>
     </header>
   );
