@@ -8,7 +8,7 @@ import Header from "./components/Header/Header";
 import Amenities from "./components/Home/Amenities/Amenities";
 export default function Home() {
   return (
-    <div className="p-8">
+    <div className="">
       <Container>
         <div>
           {/* <HomeBanner/> */}
