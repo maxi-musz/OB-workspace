@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 interface PricingCardProps {
   title: string;
@@ -23,9 +23,15 @@ const PricingCard: React.FC<PricingCardProps> = ({
   recommended = false,
 }) => {
   return (
-    <div className={`border rounded-lg p-6 shadow-lg ${recommended ? 'border-green-500' : 'border-gray-300'}`}>
+    <div
+      className={`border rounded-lg p-6 shadow-lg ${
+        recommended ? "border-green-500" : "border-gray-300"
+      }`}
+    >
       {recommended && (
-        <div className="bg-green-500 text-white text-center p-1 rounded-t-lg">Recommended</div>
+        <div className="bg-green-500 text-white text-center p-1 rounded-t-lg">
+          Recommended
+        </div>
       )}
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-2xl font-bold mb-2">{price}</p>
@@ -38,7 +44,10 @@ const PricingCard: React.FC<PricingCardProps> = ({
           </li>
         ))}
       </ul>
-      <Link href={buttonLink} className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 text-center block">
+      <Link
+        href={buttonLink}
+        className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 text-center block"
+      >
         {buttonLabel}
       </Link>
       {note && <p className="text-xs mt-2 text-gray-500">{note}</p>}

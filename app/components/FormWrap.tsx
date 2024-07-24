@@ -1,6 +1,7 @@
-const FormWrap = ({children}: {children: React.ReactNode}) => {
-    return ( 
-        <div className="
+const FormWrap = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div
+      className="
         min-h-fit
         h-full
         flex
@@ -8,8 +9,10 @@ const FormWrap = ({children}: {children: React.ReactNode}) => {
         justify-center
         ptb-12
         pt-24
-        ">
-            <div className="
+        "
+    >
+      <div
+        className="
             max-w-[650px]
             w-full
             flex
@@ -21,11 +24,12 @@ const FormWrap = ({children}: {children: React.ReactNode}) => {
             rounded-md
             p-4
             md:p-8
-            ">
-                {children}
-            </div>
-        </div>
-     );
-}
- 
+            "
+      >
+        {children}
+      </div>
+    </div>
+  );
+};
+
 export default FormWrap;
